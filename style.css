@@ -54,6 +54,7 @@ html, body{
     font-family: Monument-bold;
     font-size: 2.5vw;
     letter-spacing: -0.1vw;
+    position: relative;
 }
 
 #nav h2{
@@ -65,6 +66,26 @@ html, body{
     justify-content: center;
     border-right: 2px solid black;
     font-size: 2.5vh;
+}
+
+#nav h1::after{
+    content: "©️";
+    font-family: Gilroy;
+    font-size: 1vw;
+    position: absolute;
+    top: 15%;
+    right: 12%;
+}
+
+#nav h1::before{
+    content: "Model Management";
+    font-family: Gilroy;
+    font-size: 0.6vw;
+    letter-spacing: 0.3vh;
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    color: rgb(80, 76, 76);
 }
 
 #nav h2:nth-last-child(1){
@@ -359,18 +380,261 @@ html, body{
 }
 
 #marque{
-    height: 20vh;
+    height: 16vh;
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
+    padding: 1vw;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
 }
 
 #marque h1{
-    -webkit-text-stroke: 2px black; /* For Safari and Chrome */
+    -webkit-text-stroke: 2px black; 
     color: transparent;
     letter-spacing: 0.3vh;
+    display: inline-block;
+    font-size: 4vw;
+    font-family: Monument-bold;
+    margin-right: 16px;
+    letter-spacing: 2px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+
 #footer{
-    height: 1005px;
+    height: 100%;
     width: 100%;
+}
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ----------------------RESPONSIVE----------------------- */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+@media (max-width:600px) {
+
+    body{
+        overflow-x: hidden;
+    }
+    #nav{
+        height: 6vh;
+        width: 100%;
+        /* background-color: red; */
+        margin-top: 2vh;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #nav h1{
+        /* background-color: yellow; */
+        height: 100%;
+        width: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Monument-bold;
+        font-size: 6vw;
+        letter-spacing: -0.1vw;
+        position: relative;
+        padding-left: 20vw;
+    }
+
+    #nav h3{
+        display: none;
+    }
+    
+    #nav h2{
+        /* background-color: blue; */
+        height: 100%;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 2px solid black;
+        font-size: 1.5vh;
+        display: none;
+    }
+    
+    #nav h1::after{
+        content: "©️";
+        font-family: Gilroy;
+        font-size: 5vw;
+        position: absolute;
+        top: 0%;
+        left: 180%;
+    }
+    
+    #nav h1::before{
+        content: "Model Management";
+        font-family: Gilroy;
+        font-size: 1.5vw;
+        letter-spacing: 0.3vh;
+        position: absolute;
+        top: 80%;
+        left: 120%;
+        color: rgb(80, 76, 76);
+        display: none;
+    }
+    
+    #nav h2:nth-last-child(1){
+        width: 10%;
+        /* background-color: red; */
+        padding-right: 2vw;
+    }
+
+    #nav h3{
+        display: block;
+        font-size: 8vw;
+        padding-right: 5vw;
+    }
+
+    #center{
+        height: 45%;
+        width: 100%;
+        padding: 3vw;
+        position: relative;
+        /* background-color: blue; */
+    }
+    
+    #content{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        /* background-color: red; */
+    }
+    
+    #content video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    #overlay{
+        height: 40%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        padding: 3vw;
+        /* color: white; */
+        color: black;
+        /* background-color: green; */
+    
+        /* background-color: rgb(241, 227, 200, 0.134); */
+        background-color: rgba(54, 52, 46, 0.234);
+        backdrop-filter: blur(2px);
+    }
+    
+    #overlay1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    #overlay1 h1 {
+        font-family: Monument-bold;
+        font-size: 5vw;
+    }
+    
+    #overlay1 h2{
+        font-size: 4vw;
+        padding: 2vw 4vw;
+        border-radius: 50%;
+        border: 3px solid black;
+        /* background-color: red; */
+    }
+    
+    #overlay2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 2px solid black;
+        padding: 1.5vw 0;
+    }
+    
+    #overlay2 img{
+        color: white;
+        height: 8vw;
+        padding-right: 2vw;
+    }
+    
+    #overlay2 h4{
+        font-size: 4vw;
+    }
+    
+
+    * ------------------------------------------------ */
+/* page 2 */
+/* ----------------------------------------------- */
+
+#scroll{
+    height: 50vh;
+    width: 100%;
+    /* background-color: red; */
+
+    white-space: nowrap; /* come into one line total things (both containers) */
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll::-webkit-scrollbar{
+    display: none;
+}
+
+#container{
+    height: 40%; 
+    width: 123%;
+    /* background-color: blue; */
+    padding: 0.5vw;
+
+    display: inline-block;
+
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroll img{
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2vw;
+}
+
+@keyframes anime {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+    
 }
