@@ -1,0 +1,193 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(Fonts/Gilroy-ExtraBold.otf);
+}
+@font-face {
+    font-family: Monument-reg;
+    src: url(Fonts/MonumentExtended-Regular.otf);
+}
+@font-face {
+    font-family: Monument-bold;
+    src: url(Fonts/MonumentExtended-Ultrabold.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+    position: relative;
+    padding-top: 0.1px; /*bug*/
+}
+
+#nav{
+    height: 10vh;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 7vh;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav h1{
+    /* background-color: yellow; */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Monument-bold;
+    font-size: 2.5vw;
+    letter-spacing: -0.1vw;
+}
+
+#nav h2{
+    /* background-color: blue; */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid black;
+    font-size: 2.5vh;
+}
+
+#nav h2:nth-last-child(1){
+    width: 10%;
+    /* background-color: red; */
+    padding-right: 2vw;
+}
+
+#center{
+    height: 80%;
+    width: 100%;
+    padding: 3vw;
+    position: relative;
+    /* background-color: blue; */
+}
+
+#content{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* background-color: red; */
+}
+
+#content video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#overlay{
+    height: 55%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 3vw;
+    /* color: white; */
+    color: black;
+    /* background-color: green; */
+
+    /* background-color: rgb(241, 227, 200, 0.134); */
+    background-color: rgba(54, 52, 46, 0.234);
+    backdrop-filter: blur(2px);
+}
+
+#overlay1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#overlay1 h1 {
+    font-family: Monument-bold;
+    font-size: 3.4vw;
+}
+
+#overlay1 h2{
+    font-size: 2vw;
+    padding: 2vw 2.7vw;
+    border-radius: 50%;
+    border: 3px solid black;
+    /* background-color: red; */
+}
+
+#overlay2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid black;
+    padding: 1.5vw 0;
+}
+
+#overlay2 img{
+    color: white;
+    height: 3vw;
+}
+
+#overlay2 h4{
+    font-size: 1.5vw;
+}
+
+
+/* ------------------------------------------------ */
+/* page 2 */
+/* ----------------------------------------------- */
+
+#scroll{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+
+    white-space: nowrap; /* come into one line total things (both containers) */
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#container{
+    height: 100%; 
+    width: 123%;
+    /* background-color: blue; */
+    padding: 0.5vw;
+
+    display: inline-block;
+
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroll img{
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2vw;
+}
+
+@keyframes anime {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
