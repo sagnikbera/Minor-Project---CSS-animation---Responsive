@@ -299,6 +299,11 @@ html, body{
     margin-left: 2vw;
     padding-right: 5vw;
     position: relative;
+    transition: all ease 0.7s;
+}
+
+.elem:hover{
+    background-color: wheat ;
 }
 
 .elem:nth-last-child(1){
@@ -312,7 +317,14 @@ html, body{
     border-radius: 50%;
     position: absolute;
     left: 20%;
-    
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+    transition: left ease 0.7s;
+}
+
+.elem img:hover{
+    filter: blur(0px);
+    left: 30%;
 }
 
 .rightPartimg{
@@ -344,4 +356,21 @@ html, body{
 .rightPart{
     position: absolute;
     left: 60%;
+}
+
+#marque{
+    height: 20vh;
+    width: 100%;
+    background-color: red;
+}
+
+#marque h1{
+    -webkit-text-stroke: 2px black; /* For Safari and Chrome */
+    color: transparent;
+    letter-spacing: 0.3vh;
+}
+
+#footer{
+    height: 1005px;
+    width: 100%;
 }
