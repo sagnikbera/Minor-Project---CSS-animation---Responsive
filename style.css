@@ -161,6 +161,10 @@ html, body{
     overflow-y: hidden;
 }
 
+#scroll::-webkit-scrollbar{
+    display: none;
+}
+
 #container{
     height: 100%; 
     width: 123%;
@@ -195,7 +199,7 @@ html, body{
 #alphabet{
     height: 10vh;
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,19 +211,137 @@ html, body{
 #alphabet h5{
     margin-right: 1.5vw;
     font-size: 1.5vw;
-    letter-spacing: 0vw;
+    letter-spacing: 4px;
     border-bottom: 2px solid black;
+    /* background-color: green; */
 }
 
 #alphabet h6{
     font-size: 1vw;
     letter-spacing: 1vw;
-    background-color: yellow;
+    /* background-color: yellow; */
     padding: 0.4vw 0.3vw;
     border-radius: 50%;
+    /* border: 2px solid black; */
+
+    transition: all ease 0.5s;
+}
+
+#alphabet h6:hover{
+    border: 2px solid rgb(88, 86, 86);
+    cursor: pointer;
 }
 
 #page2{
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vw;
+    border-bottom: 2px solid black;
+}
+
+#page2part1{
+    height: 100%;
+    width: 50%;
+    /* background-color: red; */
+    background-image: url(/Minor-Project---CSS-animation---Responsive/Asset/Page2/left.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#page2part2{
+    height: 100%;
+    width: 40%;
+    /* background-color: rgb(132, 0, 255); */
+}
+
+#page2part2 img{
+    height: 80%;
+    width: 70%;
+    object-fit: cover;
+}
+
+#page2part2 h3{
+    padding: 1vh;
+    font-size: 1.7vw;
+}
+
+#page2part2 h4{
+    padding-left: 1vh;
+    font-size: 1.2vw;
+}
+
+#page3{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 5vw 4vw;
+}
+
+#page3 h1{
+    text-align: center;
+    font-family: Monument-bold;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    margin-bottom: 5vh;
+}
+
+.elem{
+    height: 16vh;
+    width: 100%;
+    /* background-color: red; */
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2vw;
+    padding-right: 5vw;
+    position: relative;
+}
+
+.elem:nth-last-child(1){
+    border-bottom: 2px solid black;
+}
+
+.elem img{
+    height: 6.6vw;
+    width: 6.6vw;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    left: 20%;
+    
+}
+
+.rightPartimg{
+    position: absolute;
+    left: 20%;
+}
+
+.rightPartimg h2{
+    font-size: 6vh;
+}
+
+.rightPartimg h5{
+    font-size: 1.8vh;
+}
+
+.elem h4{
+    font-size: 2vh;
+    width: 6%;
+}
+
+.rightPart h2{
+    font-size: 6vh;
+}
+
+.rightPart h5{
+    font-size: 1.8vh;
+}
+
+.rightPart{
+    position: absolute;
+    left: 60%;
 }
